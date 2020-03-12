@@ -1,14 +1,12 @@
-package javaapplication11;
-
 import java.util.LinkedList;
 
-public class Node {
+public final class Node {
 
     public int x;
     public Node parent;
     public int[] puzzle = new int[9];
-    public LinkedList<Node> children = new LinkedList<Node>();
-    public int col = 3;
+    public LinkedList<Node> children = new LinkedList<>();
+    public final int col = 3;
 
     public Node(int[] p) {
         setPazzle(p);
@@ -111,15 +109,11 @@ public class Node {
     }
 
     public void copyPuzzle(int[] a, int[] b) {
-        for (int i = 0; i < b.length; i++) {
-            a[i] = b[i];
-        }
+        System.arraycopy(b, 0, a, 0, b.length);
     }
 
     public void setPazzle(int[] p) {
-        for (int i = 0; i < puzzle.length; i++) {
-            this.puzzle[i] = p[i];
-        }
+        System.arraycopy(p, 0, this.puzzle, 0, puzzle.length);
 
     }
 
