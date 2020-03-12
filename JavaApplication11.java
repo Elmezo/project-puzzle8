@@ -1,5 +1,3 @@
-package javaapplication11;
-
 import java.util.LinkedList;
 
 public class JavaApplication11 {
