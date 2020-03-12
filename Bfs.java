@@ -1,5 +1,3 @@
-package javaapplication11;
-
 import java.util.LinkedList;
 
 public class Bfs {
@@ -9,9 +7,9 @@ public class Bfs {
 
     public LinkedList<Node> BreadthFisrstSearch(Node root) {
 
-        LinkedList<Node> patheToSolu = new LinkedList<Node>();
-        LinkedList<Node> OpenList = new LinkedList<Node>();
-        LinkedList<Node> ClosedList = new LinkedList<Node>();
+        LinkedList<Node> patheToSolu = new LinkedList<>();
+        LinkedList<Node> OpenList = new LinkedList<>();
+        LinkedList<Node> ClosedList = new LinkedList<>();
         OpenList.add(root);
         boolean goalFound = false;
         while (OpenList.size() > 0 && !goalFound) {
