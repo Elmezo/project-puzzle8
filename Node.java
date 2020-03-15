@@ -82,7 +82,7 @@ public final class Node {
             child.parent = this;
         }
     }
-//---------------*----------------------------
+//-------------------*--------------------------
 
     public void printPuzzle() {
         System.out.println();
@@ -119,16 +119,20 @@ public final class Node {
 
     public boolean GoalTest() {
 
-        boolean isGoal = true;
+        //boolean isGoal = true;
         int m = puzzle[0];
 
         for (int i = 1; i < puzzle.length; i++) {
             if (m > puzzle[i]) {
-                isGoal = false;
-                m = puzzle[i];
+                //  isGoal = false;
+                return false;
             }
+
+            m = puzzle[i];
+
         }
-        return isGoal;
+        // return isGoal;
+        return true;
     }
 
 }
