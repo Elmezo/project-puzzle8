@@ -2,9 +2,6 @@ import java.util.LinkedList;
 
 public class Bfs {
 
-    public Bfs() {
-    }
-
     public LinkedList<Node> BreadthFisrstSearch(Node root) {
 
         LinkedList<Node> patheToSolu = new LinkedList<>();
@@ -23,7 +20,7 @@ public class Bfs {
                 if (Curuntchild.GoalTest()) {
                     System.out.println("Goal Found :) ");
                     goalFound = true;
-                    //------
+                    //----------------------
                     pathTrace(patheToSolu, Curuntchild);
 
                 }
@@ -32,6 +29,8 @@ public class Bfs {
                 }
             }
         }
+
+        System.out.println(patheToSolu.size());
 
         return patheToSolu;
     }
